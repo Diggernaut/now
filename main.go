@@ -101,3 +101,7 @@ func MustParse(strs ...string) time.Time {
 func Between(time1, time2 string) bool {
 	return New(time.Now()).Between(time1, time2)
 }
+
+func IsEndOfMonth() bool {
+	return New(time.Now()).IsEndOfMonth()
+}

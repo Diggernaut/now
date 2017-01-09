@@ -180,3 +180,7 @@ func (now *Now) Between(time1, time2 string) bool {
 	restime2 := now.MustParse(time2)
 	return now.After(restime) && now.Before(restime2)
 }
+
+func (now *Now) IsEndOfMonth() bool {
+	return now.Day() == now.EndOfMonth().Day()
+}
